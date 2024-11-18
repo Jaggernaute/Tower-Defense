@@ -1,4 +1,4 @@
-package programm.mobs;
+package game.mobs;
 
 public enum Element {
     
