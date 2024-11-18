@@ -1,4 +1,4 @@
-package game.mobs;
+package programm.mobs;
 
 public abstract class Mob{
     private String name;

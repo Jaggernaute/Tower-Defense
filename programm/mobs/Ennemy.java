@@ -1,4 +1,4 @@
-package game.mobs;
+package programm.mobs;
 
 public class Ennemy extends Mob{
     private int speed;
