@@ -11,7 +11,8 @@ public abstract class Mob{
 
     public Mob(){};
 
+    public Element getElement(){
+        return this.element;
+    }
     public int checkVulnerability(Element element){}
-
-    public int attack(Mob target){}
 }
