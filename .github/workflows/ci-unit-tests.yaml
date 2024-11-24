@@ -1,8 +1,7 @@
 name: unit-tests
 run-name: ${{ github.actor }} is running the unit tests 🚀
 
-on:
-   push: [push]
+on: [push]
 
 jobs :
     unit-tests:
