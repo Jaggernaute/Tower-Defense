@@ -27,4 +27,5 @@ jobs :
           run: |
             cd scripts && make test > test-output.txt
             echo "##[set-output name=tests-passed;]$(cat test-output.txt | grep -oP 'Tests run: \K[0-9]+(?=,)' | head -1)"
-            #upload test results
+            cat test-output.txt
+            
