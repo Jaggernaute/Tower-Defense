@@ -2,9 +2,7 @@ name: unit-tests
 run-name: ${{ github.actor }} is running the unit tests 🚀
 
 on:
-  push:
-    branches:
-      - '!main'
+   push: [push]
 
 jobs :
     unit-tests:
