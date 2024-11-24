@@ -1,4 +1,4 @@
-package istic.po.towerDefense.src;
+package game;
 
 public class Main {
     public static void main(String[] args) {
