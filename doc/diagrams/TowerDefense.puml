@@ -20,17 +20,21 @@ package game <<frame>> {
 
 
         Elements -- Mob
-
+        Status -- Mob
         abstract class Mob {
             - String: name
-            - int: health
+            - int: maxHealth
+            - int: currentHealth
             - int: attack
             - int: attackSpeed
             - Element: element
-            + int: checkVulnerability()
-            + int: attack()
+            + {abstract}int: attack()
+            +
         }
 
+        enum Status {
+            WIP
+        }
 
         together {
         skinparam groupInheritance 2
@@ -43,11 +47,17 @@ package game <<frame>> {
                 - int: range
             }
         }
+
+        class Projectile {
+            - Mob: sender
+            - Mob: target
+            -
+        }
     }
     package interface {
         Shop::towers --left-- Tower
         class Shop {
-            - List<Tower>: towers
+            - Map<Tower>: towers
         }
         class PlayerInfo {
             - Player: player
@@ -60,7 +70,7 @@ package game <<frame>> {
             + void: displayWave()
         }
 
-        class Map{
+        class GameMap{
         }
     }
     Player -- PlayerInfo
@@ -75,12 +85,29 @@ package game <<frame>> {
         - int: maxLevel
         - int: currentWave
         - int: maxWave
+        - int: tick
         - Game()
         + Game: getInstance()
+        + void: gameUpdate()
     }
 
-    class Map {
+    class GameMap {
     }
+
+    CombatManager - Mob
+
+    class CombatManager {
+        - Map<Mob>: mobs
+        + heal(Mob: receiver, int: value)
+        + dealDamage(Mob: sender, Mob: receiver, int: damage, Status: status)
+        + int: checkVulnerability()
+    }
+
+    class EntityManager {
+        -
+    }
+
+
 }
 
 
