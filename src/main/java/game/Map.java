@@ -1,6 +1,7 @@
 package src.main.java.game;
-import libs.StdDraw;
 import java.awt.Font;
+
+import stdAudio.StdDraw;
 
 public class Map {
     double version;

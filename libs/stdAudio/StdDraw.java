@@ -1,4 +1,4 @@
-package libs; /******************************************************************************
+package stdAudio; /******************************************************************************
  *  Compilation:  javac StdDraw.java
  *  Execution:    java StdDraw
  *  Dependencies: none

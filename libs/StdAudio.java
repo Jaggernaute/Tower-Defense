@@ -29,6 +29,8 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.SourceDataLine;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
+import stdAudio.StdAudioStereo;
+
 /**
  *  The {@code StdAudio} class provides static methods for
  *  playing, reading, and saving audio.
