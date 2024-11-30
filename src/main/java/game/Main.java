@@ -1,6 +1,6 @@
 package src.main.java.game;
 import java.awt.Font;
-import libs.StdDraw;
+import libs.*;
     
 public class Main {
     public static void main(String[] args) {
@@ -13,5 +13,6 @@ public class Main {
         map.drawPlayerInfos(50, 20);
         map.drawStore();
         map.drawMainMap();
+        StdAudioStereo.play("ressources/sounds/splash.wav");
     }
 }
