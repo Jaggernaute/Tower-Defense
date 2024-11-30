@@ -1,6 +1,7 @@
 package src.main.java.game;
 import java.awt.Font;
-import libs.StdAudioStereo;
+
+import stdAudio.StdAudioStereo;
     
 public class Main {
     public static void main(String[] args) {
