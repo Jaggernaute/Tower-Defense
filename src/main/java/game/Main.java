@@ -14,6 +14,6 @@ public class Main {
         map.drawPlayerInfos(50, 20);
         map.drawStore();
         map.drawMainMap();
-        StdAudioStereo.play("src/main/resources/sounds/splash.wav");
+        StdAudioStereo.play("src/main/resources/sounds/game_launched.wav");
     }
 }
