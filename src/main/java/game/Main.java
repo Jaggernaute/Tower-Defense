@@ -13,6 +13,6 @@ public class Main {
         map.drawPlayerInfos(50, 20);
         map.drawStore();
         map.drawMainMap();
-        StdAudioStereo.play("ressources/sounds/splash.wav");
+        StdAudioStereo.play("splash.wav");
     }
 }
