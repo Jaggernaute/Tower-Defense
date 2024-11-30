@@ -1,5 +1,6 @@
 package src.main.java.game;
 import java.awt.Font;
+import libs.StdDraw;
     
 public class Main {
     public static void main(String[] args) {

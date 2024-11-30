@@ -30,15 +30,19 @@ public class Map {
     public void drawPlayerInfos(int coinsValue, int lifeValue){
         
         this.drawCoinIcon();
+        this.drawHeartIcon(0.975,0.947,0.018);
         Font f = new Font("Arial", Font.BOLD, 20);
         StdDraw.setFont(f);
         StdDraw.setPenColor(StdDraw.YELLOW);
         StdDraw.text(0.85, 0.945, "" + coinsValue);
+        StdDraw.setPenColor(223, 75, 95);
+        StdDraw.text(0.94,0.945, ""+ lifeValue);
         StdDraw.setPenRadius(0.003);
         StdDraw.setPenColor(StdDraw.GREEN);
         StdDraw.rectangle(0.9, 0.947, 0.1, 0.023);
     }
 
+    //Dessine l'icône de pièce
     private void drawCoinIcon(){
         StdDraw.setPenColor(StdDraw.YELLOW);
         StdDraw.setPenRadius(0.05);
@@ -46,6 +50,38 @@ public class Map {
         StdDraw.setPenColor(StdDraw.SILVER);
         StdDraw.setPenRadius(0.04);
         StdDraw.point(0.82, 0.947);
+    }
+
+    //Dessine l'icône de coeur
+    private void drawHeartIcon(double centerX, double centerY, double halfHeight){
+        StdDraw.setPenColor(223, 75, 95);
+        double [] listX = new double []
+            {
+                centerX,
+                centerX - halfHeight ,
+                centerX - halfHeight ,
+                centerX - 0.66 * halfHeight ,
+                centerX - 0.33 * halfHeight ,
+                centerX,
+                centerX + 0.33 * halfHeight ,
+                centerX + 0.66 * halfHeight ,
+                centerX + halfHeight ,
+                centerX + halfHeight ,
+                };
+                double [] listY = new double []
+                {
+                centerY - halfHeight ,
+                centerY,
+                centerY + 0.5 * halfHeight ,
+                centerY + halfHeight ,
+                centerY + halfHeight ,
+                centerY + 0.5 * halfHeight ,
+                centerY + halfHeight ,
+                centerY + halfHeight ,
+                centerY + 0.5 * halfHeight ,
+                centerY,
+                };
+                StdDraw.filledPolygon(listX , listY);
     }
 
     //Dessine la zone Boutique
