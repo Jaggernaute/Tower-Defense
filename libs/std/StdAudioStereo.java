@@ -1,4 +1,5 @@
-package stdAudio;
+package std;
+
 
 
 import javax.sound.sampled.Clip;
@@ -23,7 +24,7 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.SourceDataLine;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
-import stdAudio.StdAudio;
+import std.StdAudio;
 
 /**
  *  The {@code StdAudioStereo} class provides static methods for playing,

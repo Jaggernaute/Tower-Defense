@@ -1,5 +1,7 @@
 package libs;
 
+import std.StdDraw;
+
 public class TestStdDraw {
     public static void main(String[] args) {
         StdDraw.setPenRadius(0.05);

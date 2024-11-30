@@ -1,7 +1,7 @@
 package src.main.java.game;
 import java.awt.Font;
 
-import stdAudio.StdDraw;
+import std.StdDraw;
 
 public class Map {
     double version;
@@ -53,6 +53,7 @@ public class Map {
         StdDraw.point(0.82, 0.947);
     }
 
+    
     //Dessine l'icône de coeur
     private void drawHeartIcon(double centerX, double centerY, double halfHeight){
         StdDraw.setPenColor(223, 75, 95);

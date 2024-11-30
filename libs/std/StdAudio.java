@@ -1,3 +1,4 @@
+package std;
 /******************************************************************************
  *  Compilation:  javac StdAudio.java
  *  Execution:    java StdAudio
@@ -28,8 +29,6 @@ import javax.sound.sampled.DataLine;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.SourceDataLine;
 import javax.sound.sampled.UnsupportedAudioFileException;
-
-import stdAudio.StdAudioStereo;
 
 /**
  *  The {@code StdAudio} class provides static methods for
