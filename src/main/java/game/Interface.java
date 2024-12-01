@@ -3,12 +3,18 @@ import java.awt.Font;
 
 import std.StdDraw;
 
-public class Map {
+public class Interface {
     double version;
     Font font;
+
+    //To implement
+    Block map;
+    Block playerInfos;
+    Block gameInfos;
+    Block shop;
     
     //Setup de la fenetre
-    public Map(double ver, Font font){
+    public Interface(double ver, Font font){
         this.version = ver;
         this.font = font;
         StdDraw.setCanvasSize(1080,720);
