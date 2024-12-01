@@ -1,5 +1,3 @@
-package libs;
-
 import std.StdDraw;
 
 public class TestStdDraw {
