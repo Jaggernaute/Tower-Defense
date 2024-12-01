@@ -17,7 +17,7 @@ public class Interface {
     public Interface(double ver, Font font){
         this.version = ver;
         this.font = font;
-        StdDraw.setCanvasSize(1080,720);
+        StdDraw.setCanvasSize(1024,720);
         StdDraw.setTitle("Tower Defense VideCoq_Merrer V" + version);
     }
 
