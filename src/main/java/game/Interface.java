@@ -1,6 +1,5 @@
 package src.main.java.game;
 import java.awt.Font;
-
 import std.StdDraw;
 
 public class Interface {
