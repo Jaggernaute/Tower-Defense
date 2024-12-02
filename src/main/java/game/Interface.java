@@ -22,7 +22,7 @@ public class Interface {
         StdDraw.setCanvasSize(1024,720);
         StdDraw.setTitle("Tower Defense VideCoq_Merrer V" + version);
     }
-
+    
     //Dessine la zone Info Jeu
     public void drawGameInfos(int[] level, int[] waves){
         StdDraw.setFont(this.font);
