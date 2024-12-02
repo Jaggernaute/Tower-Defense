@@ -10,10 +10,10 @@ public class Main {
         Interface map = new Interface(0.0, font);
         int[] level = {2, 4};
         int[] waves = {1,6};
-        StdAudioStereo.playInBackground("src/main/resources/sounds/lego-building.wav");
+        StdAudioStereo.playInBackground("src/main/resources/sounds/rendertrucdefensedetour.wav");
         map.drawGameInfos(level, waves);
         map.drawPlayerInfos(50, 20);
-        map.drawStore();
+        map.drawShop();
         map.drawMainMap();
         StdAudioStereo.play("src/main/resources/sounds/game_launched.wav");
         for (;;){
