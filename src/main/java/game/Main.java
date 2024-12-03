@@ -16,10 +16,5 @@ public class Main {
         map.drawShop();
         map.drawMainMap();
         StdAudioStereo.play("src/main/resources/sounds/game_launched.wav");
-        for (;;){
-            if(StdDraw.isMousePressed()){
-                StdAudioStereo.play("src/main/resources/sounds/splash.wav");
-            }
-        }
     }
 }

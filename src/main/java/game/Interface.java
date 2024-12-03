@@ -6,7 +6,6 @@ public class Interface {
     double version;
     Font font;
 
-    //TODO
     Block map;
     Block playerInfos;
     Block gameInfos;
@@ -16,9 +15,10 @@ public class Interface {
     public Interface(double ver, Font font){
         this.version = ver;
         this.font = font;
-        this.playerInfos = new Block(0.9, 0.947, 0.023, 0.1);
-        this.gameInfos = new Block(0.9,0.987,0.013,0.10);
-        this.shop = new Block(0.9, 0.46, 0.458, 0.1);
+        this.map = new Block(0.4, 0.45, 0.5, 0.4);
+        this.playerInfos = new Block(0.9, 0.825, 0.024, 0.1);
+        this.gameInfos = new Block(0.9,0.786,0.014,0.10);
+        this.shop = new Block(0.9, 0.41, 0.36, 0.1);
         StdDraw.setCanvasSize(1024,720);
         StdDraw.setTitle("Tower Defense VideCoq_Merrer V" + version);
     }
@@ -43,7 +43,7 @@ public class Interface {
         Font f = new Font("Arial", Font.BOLD, 20);
         StdDraw.setFont(f);
         StdDraw.setPenColor(StdDraw.YELLOW);
-        StdDraw.text(this.playerInfos.getCenterX()-0.05, 0.945, "" + coinsValue);
+        StdDraw.text(this.playerInfos.getCenterX()-0.05, this.playerInfos.getCenterY(), "" + coinsValue);
         StdDraw.setPenColor(223, 75, 95);
         StdDraw.text(this.playerInfos.getCenterX()+0.04,this.playerInfos.getCenterY()-0.002, ""+ lifeValue);
         StdDraw.setPenRadius(0.003);
@@ -55,10 +55,10 @@ public class Interface {
     private void drawCoinIcon(){
         StdDraw.setPenColor(StdDraw.YELLOW);
         StdDraw.setPenRadius(0.05);
-        StdDraw.point(0.82, 0.947);
+        StdDraw.point(this.playerInfos.getCenterX()-0.08, this.playerInfos.getCenterY());
         StdDraw.setPenColor(StdDraw.SILVER);
         StdDraw.setPenRadius(0.04);
-        StdDraw.point(0.82, 0.947);
+        StdDraw.point(this.playerInfos.getCenterX()-0.08, this.playerInfos.getCenterY());
     }
 
     //Dessine l'icône de coeur
@@ -105,9 +105,8 @@ public class Interface {
     public void drawMainMap(){
         StdDraw.setPenRadius(0.003);
         StdDraw.setPenColor(11, 102, 35);
-        StdDraw.filledRectangle(0.4,0.5,0.4,0.5);
+        StdDraw.filledSquare(this.map.getCenterX(),this.map.getCenterY(),this.map.getHalfWidth());
         StdDraw.setPenColor(StdDraw.BLACK);
-        StdDraw.rectangle(0.4, 0.5, 0.4, 0.5);
+        StdDraw.square(this.map.getCenterX(),this.map.getCenterY(),this.map.getHalfWidth());
     }
-
 }
