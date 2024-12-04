@@ -3,8 +3,9 @@ import java.awt.Font;
 import std.StdDraw;
 
 public class Interface {
-    double version;
-    Font font;
+    private double version;
+    private Font font;
+    private double offsetY = 0.1;
 
     Block map;
     Block playerInfos;
@@ -15,10 +16,10 @@ public class Interface {
     public Interface(double ver, Font font){
         this.version = ver;
         this.font = font;
-        this.map = new Block(0.4, 0.45, 0.5, 0.4);
-        this.playerInfos = new Block(0.9, 0.825, 0.024, 0.1);
-        this.gameInfos = new Block(0.9,0.786,0.014,0.10);
-        this.shop = new Block(0.9, 0.41, 0.36, 0.1);
+        this.map = new Block(0.4, 0.45+this.offsetY, 0.5, 0.4);
+        this.playerInfos = new Block(0.9, 0.825+this.offsetY, 0.024, 0.1);
+        this.gameInfos = new Block(0.9,0.786+this.offsetY,0.014,0.10);
+        this.shop = new Block(0.9, 0.41+this.offsetY, 0.36, 0.1);
         StdDraw.setCanvasSize(1024,720);
         StdDraw.setTitle("Tower Defense VideCoq_Merrer V" + version);
     }
