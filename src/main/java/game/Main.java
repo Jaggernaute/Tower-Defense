@@ -1,6 +1,5 @@
 package game;
 import java.awt.Font;
-
 import std.*;
     
 public class Main {
