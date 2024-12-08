@@ -1,4 +1,4 @@
 package game.exceptions;
 
-public class MapException {
+public class MapException extends Exception {
 }

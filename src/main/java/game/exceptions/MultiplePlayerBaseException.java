@@ -1,4 +1,4 @@
 package game.exceptions;
 
-public class MultiplePlayerBaseException {
+public class MultiplePlayerBaseException extends Exception {
 }

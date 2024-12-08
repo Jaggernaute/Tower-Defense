@@ -1,4 +1,4 @@
 package game.exceptions;
 
-public class NoPlayerBaseException {
+public class NoPlayerBaseException extends Exception {
 }

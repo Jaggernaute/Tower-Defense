@@ -1,4 +1,4 @@
 package game.exceptions;
 
-public class NoEnemySpawnException {
+public class NoEnemySpawnException extends Exception {
 }

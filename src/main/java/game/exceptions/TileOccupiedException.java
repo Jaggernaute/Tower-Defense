@@ -1,4 +1,4 @@
 package game.exceptions;
 
-public class TileOccupiedException {
+public class TileOccupiedException extends Exception {
 }

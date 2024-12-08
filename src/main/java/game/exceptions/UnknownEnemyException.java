@@ -1,4 +1,4 @@
 package game.exceptions;
 
-public class UnknownEnemyException {
+public class UnknownEnemyException extends Exception {
 }

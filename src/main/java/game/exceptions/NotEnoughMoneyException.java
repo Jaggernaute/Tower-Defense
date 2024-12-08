@@ -1,4 +1,4 @@
 package game.exceptions;
 
-public class NotEnoughMoneyException {
+public class NotEnoughMoneyException extends Exception {
 }
