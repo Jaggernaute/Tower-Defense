@@ -2,45 +2,30 @@ package game.exceptions;
 
 public class InvalidMapPathException extends GameException {
 
-    public static final String DEFAULT_ERROR_MESSAGE = "Invalid Map Path: The provided path does not exist or is not accessible";
-
-    public InvalidMapPathException() {
-        super(DEFAULT_ERROR_MESSAGE);
-    }
+    public static final String DEFAULT_ERROR_MESSAGE = "Invalid Map Path: The provided Map file does not contain a clear path from the enemy base to the player base.";
 
     /**
-     * Constructs a new GameException with a detailed error message including the cause and stack trace.
+     * Constructs a new InvalidMapPathException with a detailed error message.
+     * This exception is thrown when the provided map file does not contain a valid path
+     * from the enemy base to the player base.
      *
-     * @param message The error message associated with this exception (not used in the current implementation).
+     * @param reason    A string describing the specific reason for the invalid map path it can be one of :
+     *                  <p><ul>
+     *                      <li>No path found</li>
+     *                      <li>Multiple paths found</li>
+     *                      <li>A loop was found</li>
+     *                  </ul></p>
+     * @param levelPath The file path of the level containing the invalid map.
+     * @param mapFile   The name or path of the specific map file that is invalid.
+     * @see game.exceptions.GameException#GameException(String)
      */
-    public InvalidMapPathException(String message) {
+    public InvalidMapPathException(String reason, String levelPath, String mapFile) {
         StringBuilder sb = new StringBuilder();
         sb.append(DEFAULT_ERROR_MESSAGE).append("\n");
-        sb.append("Message: ").append(message).append("\n");
+        sb.append("Map File: ").append(mapFile).append("\n");
+        sb.append("Level Path: ").append(levelPath).append("\n");
+        sb.append("Reason: ").append(reason).append("\n");
         String fullErrorMessage = sb.toString();
         super(fullErrorMessage);
-    }
-
-    /**
-     * Constructs a new GameException with a detailed error message including the cause and stack trace.
-     *
-     * @param cause   The underlying cause of this exception.
-     */
-    public InvalidMapPathException(Throwable cause) {
-        super(DEFAULT_ERROR_MESSAGE, cause);
-    }
-
-    /**
-     * Constructs a new GameException with a detailed error message including the cause and stack trace.
-     *
-     * @param message The error message associated with this exception (not used in the current implementation).
-     * @param cause   The underlying cause of this exception.
-     */
-    public InvalidMapPathException(String message, Throwable cause) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(DEFAULT_ERROR_MESSAGE).append("\n");
-        sb.append("Message: ").append(message).append("\n");
-        String fullErrorMessage = sb.toString();
-        super(fullErrorMessage, cause);
     }
 }
