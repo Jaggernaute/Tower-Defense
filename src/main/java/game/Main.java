@@ -1,7 +1,8 @@
 package game;
+
 import java.awt.Font;
-import std.*;
-    
+import std.StdAudioStereo;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello World!");

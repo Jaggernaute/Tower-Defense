@@ -1,5 +1,7 @@
 package game;
 import java.awt.Font;
+
+import game.Block;
 import std.StdDraw;
 
 public class Interface {

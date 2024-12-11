@@ -7,8 +7,8 @@ public class MainMap {
     
     public MainMap(String mapLink){
         //lecture de la map et assignation des tailles sizeY et sizeX
-        int sizeX; 
-        int sizeY;
+        int sizeX = 0;
+        int sizeY = 0;
         if(sizeX <= 10 && sizeY <= 10){
             this.mapCases =  new Case[10][10];
             this. offsetX = (10 - sizeX)/2;

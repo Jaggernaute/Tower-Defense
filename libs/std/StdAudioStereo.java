@@ -47,9 +47,9 @@ import std.StdAudio;
  *  <li> If you ran our autoinstaller, use the commands
  *  {@code javac-introcs} and {@code java-introcs} (or {@code javac-algs4}
  *  and {@code java-algs4}) when compiling and executing. These commands
- *  add {@code stdlib.jar} (or {@code algs4.jar}) to the Java classpath, which
+ *  add {@code stdlib-1.0.jar} (or {@code algs4.jar}) to the Java classpath, which
  *  provides access to {@code StdAudioStereo}.
- *  <li> Download <a href = "https://introcs.cs.princeton.edu/java/code/stdlib.jar">stdlib.jar</a>
+ *  <li> Download <a href = "https://introcs.cs.princeton.edu/java/code/stdlib.jar">stdlib-1.0.jar</a>
  *  (or <a href = "https://algs4.cs.princeton.edu/code/algs4.jar">algs4.jar</a>)
  *  and add it to the Java classpath.
  *  <li> Download <a href = "https://introcs.cs.princeton.edu/java/stdlib/StdAudioStereo.java">StdAudioStereo.java</a>
