@@ -73,6 +73,16 @@ public class MapParser {
         return parsedMap;
     }
 
+    /** Reads the contents of a file and returns them as a list of strings.
+    * <p>
+    * This method reads a file line by line and stores each line in a List.
+    * It throws a GameException if there's an error reading the file or if the file is empty.
+    * </p>
+    *
+    * @param path The Path object representing the file to be read.
+    * @return A List of Strings, where each string represents a line from the file.
+    * @throws GameException If there's an error reading the file or if the file is empty.
+    */
     private static List<String> getStrings(Path path) throws GameException {
         List<String> lines = new ArrayList<>();
 
