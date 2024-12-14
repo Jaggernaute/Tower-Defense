@@ -28,7 +28,7 @@ public class Block {
             return this.X;
         }
         public double getY(){
-            return this.X;
+            return this.Y;
         }
     }
 
