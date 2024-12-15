@@ -13,6 +13,7 @@ public class Interface {
     Block playerInfos;
     Block gameInfos;
     Block shop;
+    Block MainMenu;
     
     //Setup de la fenetre
     public Interface(double ver, Font font){
@@ -111,5 +112,11 @@ public class Interface {
         StdDraw.filledSquare(this.map.getCenterX(),this.map.getCenterY(),this.map.getHalfWidth());
         StdDraw.setPenColor(StdDraw.BLACK);
         StdDraw.square(this.map.getCenterX(),this.map.getCenterY(),this.map.getHalfWidth());
+    }
+
+    public void MainMenu(){
+        StdDraw.setPenRadius(0.003);
+        StdDraw.setPenColor(StdDraw.BLACK);
+        
     }
 }
