@@ -66,7 +66,7 @@ import javax.swing.KeyStroke;
  *  To use this class, you must have {@code StdDraw.class} in your
  *  Java classpath. If you used our autoinstaller, you should be all set.
  *  Otherwise, either download
- *  <a href = "https://introcs.cs.princeton.edu/java/code/stdlib.jar">stdlib.jar</a>
+ *  <a href = "https://introcs.cs.princeton.edu/java/code/stdlib.jar">stdlib-1.0.jar</a>
  *  and add to your Java classpath or download
  *  <a href = "https://introcs.cs.princeton.edu/java/stdlib/StdDraw.java">StdDraw.java</a>
  *  and put a copy in your working directory.
