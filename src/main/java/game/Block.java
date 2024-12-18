@@ -14,7 +14,7 @@ public class Block {
     protected class Corner{
         double X;
         double Y;
-        protected Corner(double X, double Y){
+        public Corner(double X, double Y){
             this.X = X;
             this.Y = Y;
         }
@@ -114,5 +114,9 @@ public class Block {
             this.centerX + halfWidth, 
             this.centerY - halfHeight
         );
+    }
+
+    public Corner[] getCorners(){
+        return this.corners;
     }
 }

@@ -2,6 +2,8 @@ package game;
 import java.awt.Font;
 
 import game.Block;
+import game.exceptions.MapException;
+import game.map.Tiles;
 import std.StdDraw;
 
 public class Interface {
@@ -14,9 +16,11 @@ public class Interface {
     Block gameInfos;
     Block shop;
     Block MainMenu;
+
+    MainMap mainMap;
     
     //Setup de la fenetre
-    public Interface(double ver, Font font){
+    public Interface(double ver, Font font, String mapLink){
         this.version = ver;
         this.font = font;
         this.map = new Block(0.4, 0.45+this.offsetY, 0.5, 0.4);
@@ -25,6 +29,13 @@ public class Interface {
         this.shop = new Block(0.9, 0.41+this.offsetY, 0.36, 0.1);
         StdDraw.setCanvasSize(1024,720);
         StdDraw.setTitle("Tower Defense VideCoq_Merrer V" + version);
+        try{
+            this.mainMap = new MainMap(mapLink, map);
+        }
+        catch(MapException e){
+            //TODO
+            System.out.println("Map is too big !");
+            }
     }
     
     //Dessine la zone Info Jeu
@@ -112,6 +123,56 @@ public class Interface {
         StdDraw.filledSquare(this.map.getCenterX(),this.map.getCenterY(),this.map.getHalfWidth());
         StdDraw.setPenColor(StdDraw.BLACK);
         StdDraw.square(this.map.getCenterX(),this.map.getCenterY(),this.map.getHalfWidth());
+       
+        Tile [][] mapTiles = this.mainMap.getMapTiles();
+        
+        for(Tile[] line : mapTiles){
+            for(Tile tile : line){
+                StdDraw.setPenRadius(0.003);
+                switch(tile.getType()){
+                    case Tiles.ENEMY_SPAWN :
+                        StdDraw.setPenColor(StdDraw.RED);
+                        StdDraw.filledSquare(tile.getCenterX(), tile.getCenterY(), tile.getHalfWidth());
+                        StdDraw.setPenColor(StdDraw.BLACK);
+                        StdDraw.setPenRadius(0.003);
+                        StdDraw.square(tile.getCenterX(), tile.getCenterY(), tile.getHalfWidth()); 
+                        break;
+                    
+                    case Tiles.PLAYER_BASE :
+                        StdDraw.setPenColor(StdDraw.YELLOW);
+                        StdDraw.filledSquare(tile.getCenterX(), tile.getCenterY(), tile.getHalfWidth());
+                        StdDraw.setPenColor(StdDraw.BLACK);
+                        StdDraw.setPenRadius(0.003);
+                        StdDraw.square(tile.getCenterX(), tile.getCenterY(), tile.getHalfWidth()); 
+                        break;
+
+                    case Tiles.PATH :
+                        StdDraw.setPenColor(255, 231, 192);
+                        StdDraw.filledSquare(tile.getCenterX(), tile.getCenterY(), tile.getHalfWidth());
+                        StdDraw.setPenColor(StdDraw.BLACK);
+                        StdDraw.setPenRadius(0.003);
+                        StdDraw.square(tile.getCenterX(), tile.getCenterY(), tile.getHalfWidth());
+                        break;
+
+                    case Tiles.BUILDABLE :
+                        StdDraw.setPenColor(137, 137, 194);
+                        StdDraw.filledSquare(tile.getCenterX(), tile.getCenterY(), tile.getHalfWidth());
+                        StdDraw.setPenColor(StdDraw.BLACK);
+                        StdDraw.setPenRadius(0.003);
+                        StdDraw.square(tile.getCenterX(), tile.getCenterY(), tile.getHalfWidth()); 
+                        break;
+                    
+                    case Tiles.DECORATION :
+                        StdDraw.setPenColor(11, 102, 35);
+                        StdDraw.filledSquare(tile.getCenterX(), tile.getCenterY(), tile.getHalfWidth());
+                        StdDraw.setPenColor(StdDraw.BLACK);
+                        StdDraw.setPenRadius(0.003);
+                        StdDraw.square(tile.getCenterX(), tile.getCenterY(), tile.getHalfWidth()); 
+                        break;
+                }
+            }
+        }
+        System.out.println("Drawing complete");
     }
 
     public void MainMenu(){

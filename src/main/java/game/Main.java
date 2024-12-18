@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] unused) {
         LOGGER.info("Starting Tower Defense game");
         Font font = new Font("Arial", Font.BOLD, 13);
-        Interface map = new Interface(0.0, font);
+        Interface map = new Interface(0.0, font, "src/main/resources/maps/5-8.mtp");
         int[] level = {2, 4};
         int[] waves = {1, 6};
 
@@ -25,6 +25,7 @@ public class Main {
         map.drawGameInfos(level, waves);
         map.drawPlayerInfos(50, 20);
         map.drawShop();
+        System.out.println("Drawing MainMap");
         map.drawMainMap();
         try {
             StdAudioStereo.play("src/main/resources/sounds/game_launched.wav");
