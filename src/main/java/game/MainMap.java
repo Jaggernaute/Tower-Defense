@@ -3,56 +3,71 @@ package game;
 import java.io.*;
 import game.exceptions.MapException;
 import java.util.logging.Logger;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.logging.Level;
 
 public class MainMap {
+    private static final Logger LOGGER = Logger.getLogger(MainMap.class.getName());
     Case[][] mapCases;
-    int offsetX;
-    int offsetY;
+    int sizeX;
+    int sizeY;
+    Block map;
     
-    public MainMap(String mapLink) throws MapException{
+    public MainMap(String mapLink, Block map) throws MapException{
         //lecture de la map et assignation des tailles sizeY et sizeX
-        String[] lines = fileRead(mapLink);
-        if(matches(lines[0], "Error %s")){
-            
-        }
-        int sizeX = lines[0].length();
+        ArrayList<ArrayList<String>> tab = fileRead(mapLink);
+        int sizeX = tab.get(0).size();
         int sizeY = 0;
-        for(String x : lines){
-            if(x != ""){
+        this.map = map;
+        for(ArrayList<String> x : tab){
+            if(x.size() != 0){
                 sizeY ++;
             }
         }
         
         if(sizeX <= 10 && sizeY <= 10){
             this.mapCases =  new Case[sizeY][sizeX];
-            this. offsetX = (10 - sizeX)/2;
-            this. offsetY = (10 - sizeY)/2;
+            this.sizeX = sizeX;
+            this.sizeY = sizeY; 
         }
         else{
+            LOGGER.log(Level.WARNING, "Map " + mapLink + " is too big !");
             throw new MapException("Map too big", "" , mapLink);
         }
     }
 
-    private String[] fileRead(String mapLink){
-        String[] lines = new String[10];
+    public void drawMainMap(ArrayList<ArrayList<String>> parsedFile){
+        double caseHalfWidth = map.getHalfWidth() / this.sizeX;
+        double caseHalfHeight = map.getHalfHeight() / this.sizeY;
+        double offsetX = 0;
+        double offsetY = 0;
+        this.mapCases = new Case[this.sizeY][this.sizeX];
         int i = 0;
+        int j;
+        while(i <= this.sizeY){
+            j = 0;
+            ArrayList<String> line = parsedFile.get(i);
+            for(String c : line){
+                switch
+            }
+        }
+
+    }
+
+    private ArrayList<ArrayList<String>> fileRead(String mapLink){
+        ArrayList<ArrayList<String>> tab = new ArrayList<>();
         try{FileReader fileReader = new FileReader(mapLink);
             BufferedReader buffReader = new BufferedReader(fileReader);
-            while(buffReader.ready() && i <= 9){
-                lines[i] = buffReader.readLine();
-                i++;
+            //If file is not empty
+            while(buffReader.ready()){
+                ArrayList<String> lines = new ArrayList<>(Arrays.asList(buffReader.readLine().split("")));
             }
-            if(10 <= i && buffReader.ready()){
-                lines[0] = "Error : too many lines in the file";
-                return lines;
-            }
-        }   
-        catch(Exception e){Main.LOGGER.log(Level.WARNING, "Failed to read the file : " + mapLink );
-        lines[0] = "Error : Failed to read file : " + mapLink;
-        return lines;
-    }
-        return lines;
+        }
+        catch(Exception e){
+            LOGGER.log(Level.WARNING, "Failed to load file : " + mapLink);
+        }
+        return tab;
     }
     
 }

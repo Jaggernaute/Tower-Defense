@@ -7,7 +7,7 @@ import java.util.logging.Level;
 import std.StdAudioStereo;
 
 public class Main {
-    public static final Logger LOGGER = Logger.getLogger(Main.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] unused) {
         LOGGER.info("Starting Tower Defense game");
