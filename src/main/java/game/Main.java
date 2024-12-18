@@ -28,7 +28,7 @@ public class Main {
         System.out.println("Drawing MainMap");
         map.drawMainMap();
         try {
-            StdAudioStereo.play("src/main/resources/sounds/game_launched.wav");
+            StdAudioStereo.playInBackground("src/main/resources/sounds/game_launched.wav");
         } catch (Exception e) {
             LOGGER.log(Level.WARNING, "Failed to play game launched sound", e);
         }

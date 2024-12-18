@@ -40,8 +40,9 @@ public class MainMap {
     private void prepareMainMap(ArrayList<ArrayList<String>> parsedFile){
         double caseHalfWidth = (map.getHalfWidth() / this.sizeX);
         double caseHalfHeight = (map.getHalfHeight() / this.sizeY);
+        System.out.println(map.getCorners()[0].getY());
         double centerX = map.getCorners()[0].getX() + caseHalfWidth;
-        double centerY = map.getCorners()[0].getY() + caseHalfHeight;
+        double centerY = map.getCorners()[0].getY() + caseHalfHeight-0.2;
         double offsetX = 0;
         double offsetY = 0;
         this.mapTiles = new Tile[parsedFile.size()][parsedFile.get(0).size()];
@@ -77,7 +78,7 @@ public class MainMap {
             }
             offsetX = 0;
             i++;
-            offsetY += 2*caseHalfHeight;
+            offsetY -= 2*caseHalfHeight;
         }
     }
 

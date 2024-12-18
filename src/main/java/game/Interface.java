@@ -128,7 +128,7 @@ public class Interface {
         
         for(Tile[] line : mapTiles){
             for(Tile tile : line){
-                StdDraw.setPenRadius(0.003);
+                StdDraw.setPenRadius(0.1);
                 switch(tile.getType()){
                     case Tiles.ENEMY_SPAWN :
                         StdDraw.setPenColor(StdDraw.RED);
@@ -168,6 +168,7 @@ public class Interface {
                         StdDraw.setPenColor(StdDraw.BLACK);
                         StdDraw.setPenRadius(0.003);
                         StdDraw.square(tile.getCenterX(), tile.getCenterY(), tile.getHalfWidth()); 
+                        System.out.println("Case décor");
                         break;
                 }
             }
