@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] unused) {
         LOGGER.info("Starting Tower Defense game");
         Font font = new Font("Arial", Font.BOLD, 13);
-        Interface map = new Interface(0.0, font, "src/main/resources/maps/5-8.mtp");
+        Interface map = new Interface(0.0, font, "src/main/resources/maps/10-10.mtp");
         int[] level = {2, 4};
         int[] waves = {1, 6};
 
