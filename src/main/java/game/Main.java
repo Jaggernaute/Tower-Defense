@@ -13,6 +13,9 @@ public class Main {
         LOGGER.info("Starting Tower Defense game");
         Font font = new Font("Arial", Font.BOLD, 13);
         Interface map = new Interface(0.0, font, "src/main/resources/maps/10-10.mtp");
+        // map carrés fonctionnelle mais léger décalage en haut (ajouter un offset)
+        // map Première valeur plus grande que la deuxième (fonctionnelle mais non centré verticalement)
+        // map Première valeur plus petite que la deuxième (fonctionnelle mais dépasse les limites verticales)
         int[] level = {2, 4};
         int[] waves = {1, 6};
 

@@ -78,7 +78,7 @@ public class MainMap {
             }
             offsetX = 0;
             i++;
-            offsetY -= 2*caseHalfHeight;
+            offsetY -= 2*caseHalfWidth;
         }
     }
 
