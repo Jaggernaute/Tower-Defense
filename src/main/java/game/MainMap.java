@@ -2,6 +2,7 @@ package game;
 
 import java.io.*;
 import game.exceptions.MapException;
+import game.exceptions.MultipleEnemySpawnException;
 import game.map.Tiles;
 
 import java.util.logging.Logger;
@@ -17,10 +18,12 @@ public class MainMap {
     int sizeX;
     int sizeY;
     Block map;
+    String mapLink;
     
     public MainMap(String mapLink, Block map) throws MapException{
         //lecture de la map et assignation des tailles sizeY et sizeX
         ArrayList<ArrayList<String>> tab = fileRead(mapLink);
+        this.mapLink = mapLink;
         int sizeX = tab.get(0).size();
         int sizeY = tab.size();
         this.map = map;
