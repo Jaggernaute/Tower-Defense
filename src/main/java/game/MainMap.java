@@ -7,6 +7,8 @@ import game.map.Tiles;
 import java.util.logging.Logger;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.logging.Level;
 
 public class MainMap {
@@ -45,6 +47,7 @@ public class MainMap {
         double centerY = map.getCorners()[0].getY() + caseHalfHeight-0.2;
         double offsetX = 0;
         double offsetY = 0.01;
+        Set<String> letters = new TreeSet<>();
         this.mapTiles = new Tile[parsedFile.size()][parsedFile.get(0).size()];
         int i = 0;
         int j;
@@ -55,10 +58,18 @@ public class MainMap {
             for(String st : line){
                 switch (st) {
                     case "S":
+                        if(letters.contains("S")){
+                            //TODO throw error multiple spawn
+                        }
                         this.mapTiles[i][j] = new Tile(Tiles.ENEMY_SPAWN,centerX + offsetX, centerY + offsetY, caseHalfHeight, caseHalfWidth);
+                        letters.add("S");
                         break;
                     case "B":
+                        if(letters.contains("B")){
+                            //TODO throw error multiple base
+                        }
                         this.mapTiles[i][j] = new Tile(Tiles.PLAYER_BASE,centerX + offsetX, centerY + offsetY, caseHalfHeight, caseHalfWidth);
+                        letters.add("B");
                         break;
                     case "R":
                         this.mapTiles[i][j] = new Tile(Tiles.PATH,centerX + offsetX, centerY + offsetY, caseHalfHeight, caseHalfWidth);
