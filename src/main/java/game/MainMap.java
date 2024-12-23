@@ -44,7 +44,7 @@ public class MainMap {
         double centerX = map.getCorners()[0].getX() + caseHalfWidth;
         double centerY = map.getCorners()[0].getY() + caseHalfHeight-0.2;
         double offsetX = 0;
-        double offsetY = 0;
+        double offsetY = 0.01;
         this.mapTiles = new Tile[parsedFile.size()][parsedFile.get(0).size()];
         int i = 0;
         int j;
