@@ -130,7 +130,7 @@ public class Interface {
             for(Tile tile : line){
                 StdDraw.setPenRadius(0.1);
                 switch(tile.getType()){
-                    case Tiles.ENEMY_SPAWN :
+                    case ENEMY_SPAWN :
                         StdDraw.setPenColor(StdDraw.RED);
                         StdDraw.filledSquare(tile.getCenterX(), tile.getCenterY(), tile.getHalfWidth());
                         StdDraw.setPenColor(StdDraw.BLACK);
@@ -138,7 +138,7 @@ public class Interface {
                         StdDraw.square(tile.getCenterX(), tile.getCenterY(), tile.getHalfWidth()); 
                         break;
                     
-                    case Tiles.PLAYER_BASE :
+                    case PLAYER_BASE :
                         StdDraw.setPenColor(StdDraw.YELLOW);
                         StdDraw.filledSquare(tile.getCenterX(), tile.getCenterY(), tile.getHalfWidth());
                         StdDraw.setPenColor(StdDraw.BLACK);
@@ -146,7 +146,7 @@ public class Interface {
                         StdDraw.square(tile.getCenterX(), tile.getCenterY(), tile.getHalfWidth()); 
                         break;
 
-                    case Tiles.PATH :
+                    case PATH :
                         StdDraw.setPenColor(255, 231, 192);
                         StdDraw.filledSquare(tile.getCenterX(), tile.getCenterY(), tile.getHalfWidth());
                         StdDraw.setPenColor(StdDraw.BLACK);
@@ -154,7 +154,7 @@ public class Interface {
                         StdDraw.square(tile.getCenterX(), tile.getCenterY(), tile.getHalfWidth());
                         break;
 
-                    case Tiles.BUILDABLE :
+                    case BUILDABLE :
                         StdDraw.setPenColor(137, 137, 194);
                         StdDraw.filledSquare(tile.getCenterX(), tile.getCenterY(), tile.getHalfWidth());
                         StdDraw.setPenColor(StdDraw.BLACK);
@@ -162,7 +162,7 @@ public class Interface {
                         StdDraw.square(tile.getCenterX(), tile.getCenterY(), tile.getHalfWidth()); 
                         break;
                     
-                    case Tiles.DECORATION :
+                    case DECORATION :
                         StdDraw.setPenColor(11, 102, 35);
                         StdDraw.filledSquare(tile.getCenterX(), tile.getCenterY(), tile.getHalfWidth());
                         StdDraw.setPenColor(StdDraw.BLACK);
