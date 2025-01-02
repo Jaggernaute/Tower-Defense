@@ -3,7 +3,7 @@ package game;
 import game.map.Tiles;
 
 public class Tile extends Block{
-    Tiles type;
+    private Tiles type;
 
     public Tile(Tiles type, double centerX, double centerY, double halfHeight, double halfWidth){
         super(centerX, centerY, halfHeight, halfWidth);
