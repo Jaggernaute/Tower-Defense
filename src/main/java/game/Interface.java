@@ -23,11 +23,11 @@ public class Interface {
     public Interface(double ver, Font font, String mapLink){
         this.version = ver;
         this.font = font;
+        this.MainMenu = new Block(0.5, 0.5, 0.3, 0.4);
         this.map = new Block(0.4, 0.45+this.offsetY, 0.5, 0.4);
         this.playerInfos = new Block(0.9, 0.825+this.offsetY, 0.024, 0.1);
         this.gameInfos = new Block(0.9,0.786+this.offsetY,0.014,0.10);
         this.shop = new Block(0.9, 0.41+this.offsetY, 0.36, 0.1);
-        StdDraw.setCanvasSize(1024,720);
         StdDraw.setTitle("Tower Defense VideCoq_Merrer V" + version);
         try{
             this.mainMap = new MainMap(mapLink, map);
@@ -175,9 +175,28 @@ public class Interface {
         System.out.println("Drawing complete");
     }
 
-    public void MainMenu(){
-        StdDraw.setPenRadius(0.003);
+    public void drawMainMenu(){
+        Font font = new Font("Arial", Font.BOLD, 25);
+        StdDraw.setFont(font);
+        StdDraw.setPenRadius(0.005);
         StdDraw.setPenColor(StdDraw.BLACK);
-        
+        //Bouton Start
+        StdDraw.rectangle(this.MainMenu.getCenterX(), this.MainMenu.getCenterY()+ 0.105, this.MainMenu.getHalfWidth()/3, this.MainMenu.getHalfHeight()/6);
+        StdDraw.text(this.MainMenu.getCenterX(), this.MainMenu.getCenterY()+ 0.105, "Start");
+        //Bouton Settings
+        StdDraw.rectangle(this.MainMenu.getCenterX(), this.MainMenu.getCenterY() , this.MainMenu.getHalfWidth()/3, this.MainMenu.getHalfHeight()/6);
+        StdDraw.text(this.MainMenu.getCenterX(), this.MainMenu.getCenterY(), "Settings");
+       //Bouton Quit
+        StdDraw.rectangle(this.MainMenu.getCenterX(), this.MainMenu.getCenterY()- 0.105, this.MainMenu.getHalfWidth()/3, this.MainMenu.getHalfHeight()/6);
+        StdDraw.text(this.MainMenu.getCenterX(), this.MainMenu.getCenterY()- 0.105, "Quit");  
     }
+
+    //TODO drawPauseMenu
+    public void drawPauseMenu(){
+        Font font = new Font("Arial", Font.BOLD, 25);
+        StdDraw.setFont(font);
+    }
+
+
+
 }

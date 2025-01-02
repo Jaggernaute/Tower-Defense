@@ -43,11 +43,32 @@ public class MainMap {
     }
 
     private void prepareMainMap(ArrayList<ArrayList<String>> parsedFile){
-        double caseHalfWidth = (map.getHalfWidth() / this.sizeX);
-        double caseHalfHeight = (map.getHalfHeight() / this.sizeY);
+        double caseHalfWidth;
+        double caseHalfHeight;
+        double centerX;
+        double centerY;
+        if(this.sizeY > this.sizeX){
+            caseHalfWidth = (map.getHalfWidth() / this.sizeY);
+            caseHalfHeight = (map.getHalfHeight() / this.sizeY);
+            centerX = map.getCorners()[0].getX() + caseHalfWidth + (caseHalfWidth * (this.sizeY - this.sizeX));
+            centerY = map.getCorners()[0].getY() + caseHalfHeight-0.2221;
+        }
+        else if(this.sizeX > this.sizeY){
+            caseHalfWidth = (map.getHalfWidth() / this.sizeX);
+            caseHalfHeight = (map.getHalfHeight() / this.sizeY);
+            centerX = map.getCorners()[0].getX() + caseHalfWidth;
+            centerY = map.getCorners()[0].getY() + caseHalfHeight - (caseHalfHeight * (this.sizeX - this.sizeY));
+        }
+        else{
+            caseHalfWidth = (map.getHalfWidth() / this.sizeX);
+            caseHalfHeight = (map.getHalfHeight() / this.sizeY);
+            centerX = map.getCorners()[0].getX() + caseHalfWidth;
+            centerY = map.getCorners()[0].getY() + caseHalfHeight - 0.2;
+        }
         System.out.println(map.getCorners()[0].getY());
-        double centerX = map.getCorners()[0].getX() + caseHalfWidth;
-        double centerY = map.getCorners()[0].getY() + caseHalfHeight-0.2;
+        
+        
+        
         double offsetX = 0;
         double offsetY = 0.01;
         Set<String> letters = new TreeSet<>();
