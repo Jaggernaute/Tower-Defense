@@ -8,6 +8,7 @@ import game.exceptions.MapException;
  * <p>
  * This object represent an area to display
  * <p>
+ * @since 0.14
  */
 public class Block {
     private double centerX;
@@ -23,7 +24,7 @@ public class Block {
     /***
      * A simple class to represent a corner
      * <p>
-     * This class represent a corener thanks to his 2 attributes representing respectively the position in the x-axe and the y-axe
+     * This class represent a corner thanks to his 2 attributes representing respectively the position in the x-axe and the y-axe
      * <p>
      */
     protected class Corner{
