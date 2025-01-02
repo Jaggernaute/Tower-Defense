@@ -8,8 +8,9 @@ package game;
         *  This project is based on the pdf you can find here :
         * @link ../../../doc/PO_Project_Tower_Defense.pdf
         * </p>
-        * @author Nicolas Merrer
-        * @author Alex Videco
+        * @author Nicolas Merrer aka Delfred353
+        * @author Alex Videco aka Jaggernaute
+
         * @version 0.4
      */
 public class App
