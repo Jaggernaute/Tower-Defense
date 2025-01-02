@@ -1,5 +1,14 @@
 package game;
 
+import game.exceptions.GameException;
+import game.exceptions.MapException;
+
+/***
+ * Object Block
+ * <p>
+ * This object represent an area to display
+ * <p>
+ */
 public class Block {
     private double centerX;
     private double centerY;
@@ -11,6 +20,12 @@ public class Block {
     Corner cornerBotRight;
     Corner[] corners;
 
+    /***
+     * A simple class to represent a corner
+     * <p>
+     * This class represent a corener thanks to his 2 attributes representing respectively the position in the x-axe and the y-axe
+     * <p>
+     */
     protected class Corner{
         double X;
         double Y;
@@ -32,6 +47,16 @@ public class Block {
         }
     }
 
+    /*** 
+        * Create an Object Block
+        * <p>
+        *  This methode create an Object Block representing an area to to draw for the game.
+        * </p>
+        * @param centerX a double representing the position on the x-axe of the center of the area
+        * @param centerY a double representing the position on the y-axe of the center of the area
+        * @param halfHeight a double reprensenting the half of the height(y-axe) of the area
+        * @param halfWidth a double reprensenting the half of the width(x-axe) of the area
+     */
     public Block(double centerX, double centerY, double halfHeight, double halfWidth){
         this.centerX = centerX;
         this.centerY = centerY;

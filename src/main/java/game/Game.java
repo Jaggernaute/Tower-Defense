@@ -13,13 +13,13 @@ public class Game{
         }
     }
     private boolean isGameRunning (){
-        //TODO
+        //TODO is the game running ?
         return false;
     }
     private void init(){
-        //TODO
+        //TODO init
     }
     private void update(double deltaTimeSec){
-        //TODO
+        //TODO update
     }
 }

@@ -33,7 +33,7 @@ public class Interface {
             this.mainMap = new MainMap(mapLink, map);
         }
         catch(MapException e){
-            //TODO
+            //TODO when mapException is catch
             System.out.println("Map is too big !");
             }
     }
@@ -115,7 +115,6 @@ public class Interface {
         StdDraw.rectangle(this.shop.getCenterX(), this.shop.getCenterY(), this.shop.getHalfWidth(), this.shop.getHalfHeight());
     }
 
-    //TODO
     //Dessine la zone Carte
     public void drawMainMap(){
         StdDraw.setPenRadius(0.003);

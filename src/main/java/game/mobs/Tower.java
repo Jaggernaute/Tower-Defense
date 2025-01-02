@@ -6,4 +6,7 @@ public class Tower extends Mob{
         super(name, maxHealth, atk, atkSpeed, range);
         this.cost = cost;
     }
+    public int getCost() {
+        return cost;
+    }
 }

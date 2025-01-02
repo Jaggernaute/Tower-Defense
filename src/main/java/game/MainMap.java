@@ -84,8 +84,7 @@ public class MainMap {
                         this.mapTiles[i][j] = new Tile(Tiles.DECORATION,centerX + offsetX, centerY + offsetY, caseHalfHeight, caseHalfWidth);
                         break;
                     default:
-                    //TODO
-                        //throw mapExeption ("Unknow tile")
+                    //TODO throw mapExeption ("Unknow tile")
                 }
             offsetX += 2*caseHalfWidth;
             j ++;

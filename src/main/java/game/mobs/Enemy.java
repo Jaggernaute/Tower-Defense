@@ -8,4 +8,10 @@ public class Enemy extends Mob{
         this.speed = speed;
         this.reward = reward;
     }
+    public int getSpeed() {
+        return speed;
+    }
+    public int getReward() {
+        return reward;
+    }
 }
