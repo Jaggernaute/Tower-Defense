@@ -1,15 +1,19 @@
 package game.mobs;
+import game.Coordonate;
 
-public abstract class Mob{
+public abstract class Entity{
     private String name;
     private int maxHealth;
     private int currentHealth;
     private int atk;
+    
+
     private int atkSpeed;
     private int range;
     private Element element;
+    private Coordonate coordonate;
 
-    public Mob(String name, int maxHealth, int atk, int atkSpeed, int range){
+    public Entity(String name, int maxHealth, int atk, int atkSpeed, int range){
         this.name = name;
         this.maxHealth = maxHealth;
         this.atk = atk;
@@ -51,4 +55,13 @@ public abstract class Mob{
     public int getRange() {
         return range;
     }
+
+    public Coordonate getCoordonate() {
+        return coordonate;
+    }
+
+    public void setCoordonate(Coordonate coordonate) {
+        this.coordonate = coordonate;
+    }
+
 }
