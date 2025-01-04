@@ -1,11 +1,11 @@
 package game.mobs;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class EntityManager{
     //TODO Attributs
-    ArrayList<Enemy> activeMobs;
-    ArrayList<Tower> activeTowers;
+    LinkedList<Enemy> activeMobs;
+    LinkedList<Tower> activeTowers;
 
     //TODO Constructeur
     public EntityManager(){}
