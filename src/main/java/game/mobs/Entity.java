@@ -64,4 +64,13 @@ public abstract class Entity{
         this.coordonate = coordonate;
     }
 
+    public boolean isAlive(){
+        if(getCurrentHealth() <= 0){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
 }
