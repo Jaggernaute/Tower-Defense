@@ -16,9 +16,13 @@ public class Game{
         //TODO is the game running ?
         return false;
     }
+
+    //TODO init
     private void init(){
-        //TODO init
+        
+        
     }
+
     private void update(double deltaTimeSec){
         //TODO update
     }
