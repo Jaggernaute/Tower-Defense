@@ -3,8 +3,8 @@ package game.mobs;
 public class Enemy extends Entity{
     private int speed;
     private int reward;
-    public Enemy(String name, int maxHealth, int atk, int atkSpeed, int range, int speed, int reward){
-        super(name, maxHealth, atk, atkSpeed, range);
+    public Enemy(String name, int maxHealth, int atk, double atkSpeed, double range, Element element, int speed, int reward){
+        super(name, maxHealth, atk, atkSpeed, range, element);
         this.speed = speed;
         this.reward = reward;
     }

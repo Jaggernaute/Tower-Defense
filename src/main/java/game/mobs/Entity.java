@@ -8,17 +8,18 @@ public abstract class Entity{
     private int atk;
     
 
-    private int atkSpeed;
-    private int range;
+    private double atkSpeed;
+    private double range;
     private Element element;
     private Coordonate coordonate;
 
-    public Entity(String name, int maxHealth, int atk, int atkSpeed, int range){
+    public Entity(String name, int maxHealth, int atk, double atkSpeed, double range, Element element){
         this.name = name;
         this.maxHealth = maxHealth;
         this.atk = atk;
         this.atkSpeed = atkSpeed;
         this.range = range;
+        this.element = element;
     };
 
     public Element getElement(){
@@ -48,11 +49,11 @@ public abstract class Entity{
         return atk;
     }
 
-    public int getAtkSpeed() {
+    public double getAtkSpeed() {
         return atkSpeed;
     }
 
-    public int getRange() {
+    public double getRange() {
         return range;
     }
 
