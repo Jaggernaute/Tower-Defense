@@ -6,6 +6,7 @@ public class EntityManager{
     //TODO Attributs
     LinkedList<Enemy> activeMobs;
     LinkedList<Tower> activeTowers;
+    LinkedList<Projectile> activeProjectile;
 
     //TODO Constructeur
     public EntityManager(){}

@@ -34,15 +34,19 @@ public class Block {
             this.X = X;
             this.Y = Y;
         }
+
         public void setX(double X){
             this.X = X;
         }
+
         public void setY(double Y){
             this.Y = Y;
         }
+
         public double getX(){
             return this.X;
         }
+        
         public double getY(){
             return this.Y;
         }
@@ -122,12 +126,14 @@ public class Block {
             this.centerY + halfHeight
             );
     }
+
     private void setCornerTopRight(){
         this.cornerTopRight = new Corner(
             this.centerX + halfWidth, 
             this.centerY + halfHeight
             );
     }
+
     private void setCornerBotLeft(){
         this.cornerBotLeft = new Corner(
             this.centerX - halfWidth, 

@@ -6,4 +6,5 @@ public class CombatManager {
 
     public void dealDamage(){}
     
+    public void distantAttack(){}
 }

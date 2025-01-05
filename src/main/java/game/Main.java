@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] unused) {
         LOGGER.info("Starting Tower Defense game");
         Font font = new Font("Arial", Font.BOLD, 13);
-        Interface map = new Interface(0.45, font, "src/main/resources/maps/10-3.mtp");
+        Interface map = new Interface(0.45, font, "src/main/resources/maps/10-10.mtp");
         // map carrés fonctionnelles
         // map valeur  y plus grande que la valeur x fonctionnel
         //TODO map valeur  y plus grande que la valeur x(fonctionnelle presque centré verticalement)
