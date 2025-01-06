@@ -28,7 +28,7 @@ public class Interface {
         this.MainMenu = new Block(0.5, 0.5, 0.3, 0.4);
         this.map = new Block(0.4, 0.45+this.offsetY, 0.5, 0.4);
         this.playerInfos = new Block(0.9, 0.825+this.offsetY, 0.024, 0.1);
-        this.gameInfos = new Block(0.9,0.786+this.offsetY,0.014,0.10);
+        this.gameInfos = new Block(0.9,0.786+this.offsetY,0.014,0.1);
         this.shop = new Block(0.9, 0.41+this.offsetY, 0.36, 0.1);
         StdDraw.setTitle("Tower Defense VideCoq_Merrer V" + version);
         try{
