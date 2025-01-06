@@ -9,9 +9,37 @@ public class EntityManager{
     LinkedList<Projectile> activeProjectile;
 
     //TODO Constructeur
-    public EntityManager(){}
+    public EntityManager(){
 
-    public void createEnemy(){}
+    }
+
+    public void createEnemy(String name){
+        switch (name){
+            case "Minion" :
+                this.activeMobs.add(new Enemy("Minion", 10, 3, 0, 0, Element.NEUTRAL, 1, 1));
+                break;
+            
+            case "WindGrognard" :
+                this.activeMobs.add(new Enemy("Wind Grognard", 1, 7, 2, 5, Element.AIR, 2, 1));
+                break;
+            
+            case "WaterBrute" :
+            this.activeMobs.add(new Enemy("Water Brute", 30, 5, 1, 3, Element.WATER, 1, 3));
+                break;
+
+            case "EarthBrute" :
+            this.activeMobs.add(new Enemy("Earth Brute", 30, 5, 1, 3, Element.EARTH, 1, 3));
+                break;
+            
+            case "FireGrognard" :
+            this.activeMobs.add(new Enemy("Fire Grognard", 1, 7, 2, 3, Element.FIRE, 2, 1));
+                break;
+            //TODO add bonus Mobs
+
+            case "Boss" :
+            this.activeMobs.add(new Enemy("Boss", 150, 100, 10, 2, Element.FIRE, 0.5, 100));
+        }
+    }
 
     public void createTower(String name){
         switch (name){
