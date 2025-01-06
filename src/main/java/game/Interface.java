@@ -5,6 +5,7 @@ import game.Block;
 import game.exceptions.MapException;
 import game.map.Tiles;
 import std.StdDraw;
+import game.MainMenu;
 
 public class Interface {
     private double version;
@@ -189,6 +190,7 @@ public class Interface {
        //Bouton Quit
         StdDraw.rectangle(this.MainMenu.getCenterX(), this.MainMenu.getCenterY()- 0.105, this.MainMenu.getHalfWidth()/3, this.MainMenu.getHalfHeight()/6);
         StdDraw.text(this.MainMenu.getCenterX(), this.MainMenu.getCenterY()- 0.105, "Quit");  
+        MainMenu menuObject = new MainMenu(this, this.MainMenu);
     }
 
     //TODO drawPauseMenu

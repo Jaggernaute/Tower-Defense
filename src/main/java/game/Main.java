@@ -28,12 +28,6 @@ public class Main {
         }
 
         map.drawMainMenu();
-        for(;;){
-            if(StdDraw.isMousePressed()){
-                StdDraw.clear();
-                break;
-            }
-        }
         map.drawGameInfos(level, waves);
         map.drawPlayerInfos(50, 20);
         map.drawShop();
