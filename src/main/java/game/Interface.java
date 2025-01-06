@@ -205,11 +205,35 @@ public class Interface {
 
     //TODO drawEntity
     public void drawEntity(Entity entity){
-        if( entity instanceof Enemy){
+        switch(entity.getElement()){
+            case NEUTRAL :
+                StdDraw.setPenColor(171, 171, 171);
+                break;
+            case AIR :
+                StdDraw.setPenColor(105, 246, 237);
+                break;
+            
+            case FIRE :
+                StdDraw.setPenColor(StdDraw.ORANGE);
+                break;
+            
+            case WATER :
+                StdDraw.setPenColor(StdDraw.BLUE);
+                break;
+            
+            case EARTH :
+                StdDraw.setPenColor(StdDraw.GREEN);
+                break;
+        }
 
+        Tile referenceTile = this.mainMap.getMapTiles()[0][0];
+        if( entity instanceof Enemy){
+            StdDraw.filledCircle(entity.getCoordonate().getX(), entity.getCoordonate().getY(), referenceTile.getHalfHeight()/3);
+            //TODO Draw health gauge
         }
         else if( entity instanceof Tower){
-
+            StdDraw.filledCircle(entity.getCoordonate().getX(), entity.getCoordonate().getY(), referenceTile.getHalfHeight());
+            //TODO Draw health gauge
         }
     }
 }
