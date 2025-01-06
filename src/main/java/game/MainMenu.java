@@ -1,7 +1,10 @@
 package game;
 
 import java.io.IOException;
+import java.util.logging.Level;
 
+import game.exceptions.MapException;
+import std.StdAudioStereo;
 import std.StdDraw;
 
 public class MainMenu{
@@ -18,7 +21,7 @@ public class MainMenu{
         boolean quit;
         for(;;){
             try{
-                Thread.sleep(300);
+                Thread.sleep(10);
             }
             catch(Exception e){}
             
@@ -27,43 +30,40 @@ public class MainMenu{
             start = onStart(x, y);
             settings = onSettings(x,y);
             quit = onQuit(x,y);
+
             if(start){
                 StdDraw.clear();
                 StdDraw.setPenColor(171, 171, 171);
                 StdDraw.filledRectangle(this.mainMenu.getCenterX(), this.mainMenu.getCenterY()+ 0.105, this.mainMenu.getHalfWidth()/3, this.mainMenu.getHalfHeight()/6);
+                if(StdDraw.isMousePressed()){
+                    StdDraw.clear();
+                    break;
+                }
                 map.drawMainMenu();
             }
             else if(settings){
                 StdDraw.clear();
                 StdDraw.setPenColor(171, 171, 171);
                 StdDraw.filledRectangle(this.mainMenu.getCenterX(), this.mainMenu.getCenterY(), this.mainMenu.getHalfWidth()/3, this.mainMenu.getHalfHeight()/6);
+                if(StdDraw.isMousePressed()){
+                    //TODO Launch Settings
+                 }
                 map.drawMainMenu();
             }
             else if(quit){
                 StdDraw.clear();
                 StdDraw.setPenColor(171, 171, 171);
                 StdDraw.filledRectangle(this.mainMenu.getCenterX(), this.mainMenu.getCenterY()- 0.105, this.mainMenu.getHalfWidth()/3, this.mainMenu.getHalfHeight()/6);
+                if(StdDraw.isMousePressed()){
+                    //Quit
+                    StdDraw.close();
+                    throw new InternalError();
+                 }
                 map.drawMainMenu();
             }
             else{
                 StdDraw.clear();
                 map.drawMainMenu();
-            }
-            if(StdDraw.isMousePressed()){
-                if(start){
-                //Start
-                StdDraw.clear();
-                break;
-             }
-             else if(settings){
-                //Settings
-             }
-             else if(quit){
-                //Quit
-                StdDraw.close();
-                break;
-             }
-
             }
         }
         
@@ -82,5 +82,4 @@ public class MainMenu{
         return (x >= this.mainMenu.getCenterX()-this.mainMenu.getHalfWidth()/3 && x <= this.mainMenu.getCenterX()+this.mainMenu.getHalfWidth()/3)
         &&  (y >= this.mainMenu.getCenterY()- 0.105 - this.mainMenu.getHalfHeight()/6 && y<= this.mainMenu.getCenterY() + 0.105 + this.mainMenu.getHalfHeight()/6);
     }
-
 }

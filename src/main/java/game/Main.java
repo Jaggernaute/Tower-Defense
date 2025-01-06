@@ -22,8 +22,9 @@ public class Main {
         StdDraw.setCanvasSize(1920, 1080);
 
         
-
-        map.drawMainMenu();
+        MainMenu menuObject = new MainMenu(map, map.getMainMenu());
+        try{map.drawMainMenu();}
+        catch(Exception e){};
         try {
             StdAudioStereo.playInBackground("src/main/resources/sounds/rendertrucdefensedetour.wav");
         } catch (Exception e) {

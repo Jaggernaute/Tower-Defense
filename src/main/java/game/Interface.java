@@ -176,6 +176,10 @@ public class Interface {
         System.out.println("Drawing complete");
     }
 
+    public Block getMainMenu() {
+        return this.MainMenu;
+    }
+
     public void drawMainMenu(){
         Font font = new Font("Arial", Font.BOLD, 25);
         StdDraw.setFont(font);
@@ -190,7 +194,6 @@ public class Interface {
        //Bouton Quit
         StdDraw.rectangle(this.MainMenu.getCenterX(), this.MainMenu.getCenterY()- 0.105, this.MainMenu.getHalfWidth()/3, this.MainMenu.getHalfHeight()/6);
         StdDraw.text(this.MainMenu.getCenterX(), this.MainMenu.getCenterY()- 0.105, "Quit");  
-        MainMenu menuObject = new MainMenu(this, this.MainMenu);
     }
 
     //TODO drawPauseMenu
