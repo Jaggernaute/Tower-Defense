@@ -203,7 +203,6 @@ public class Interface {
         StdDraw.setFont(font);
     }
 
-    //TODO drawEntity
     public void drawEntity(Entity entity){
         switch(entity.getElement()){
             case NEUTRAL :

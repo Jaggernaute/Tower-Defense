@@ -16,7 +16,7 @@ public class Main {
         Interface map = new Interface(0.45, font, "src/main/resources/maps/10-10.mtp");
         // map carrés fonctionnelles
         // map valeur  y plus grande que la valeur x fonctionnel
-        //TODO map valeur  y plus grande que la valeur x(fonctionnelle presque centré verticalement)
+        // map valeur  y plus grande que la valeur x(fonctionnelle presque centré verticalement)
         int[] level = {2, 4};
         int[] waves = {1, 6};
         StdDraw.setCanvasSize(1920, 1080);
