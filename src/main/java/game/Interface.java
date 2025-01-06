@@ -232,7 +232,7 @@ public class Interface {
             //TODO Draw health gauge
         }
         else if( entity instanceof Tower){
-            StdDraw.filledCircle(entity.getCoordonate().getX(), entity.getCoordonate().getY(), referenceTile.getHalfHeight());
+            StdDraw.filledSquare(entity.getCoordonate().getX(), entity.getCoordonate().getY(), referenceTile.getHalfHeight());
             //TODO Draw health gauge
         }
     }
