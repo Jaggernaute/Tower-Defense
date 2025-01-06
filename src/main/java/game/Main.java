@@ -21,13 +21,14 @@ public class Main {
         int[] waves = {1, 6};
         StdDraw.setCanvasSize(1920, 1080);
 
+        
+
+        map.drawMainMenu();
         try {
             StdAudioStereo.playInBackground("src/main/resources/sounds/rendertrucdefensedetour.wav");
         } catch (Exception e) {
             LOGGER.log(Level.WARNING, "Failed to load background music file", e);
         }
-
-        map.drawMainMenu();
         map.drawGameInfos(level, waves);
         map.drawPlayerInfos(50, 20);
         map.drawShop();
