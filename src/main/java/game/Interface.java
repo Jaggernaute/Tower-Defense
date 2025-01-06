@@ -4,6 +4,7 @@ import java.awt.Font;
 import game.Block;
 import game.exceptions.MapException;
 import game.map.Tiles;
+import game.mobs.*;
 import std.StdDraw;
 import game.MainMenu;
 
@@ -202,6 +203,13 @@ public class Interface {
         StdDraw.setFont(font);
     }
 
+    //TODO drawEntity
+    public void drawEntity(Entity entity){
+        if( entity instanceof Enemy){
 
+        }
+        else if( entity instanceof Tower){
 
+        }
+    }
 }
