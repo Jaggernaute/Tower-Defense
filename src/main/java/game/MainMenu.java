@@ -1,9 +1,5 @@
 package game;
 
-import java.io.IOException;
-import java.util.logging.Level;
-
-import game.exceptions.MapException;
 import std.StdAudioStereo;
 import std.StdDraw;
 
